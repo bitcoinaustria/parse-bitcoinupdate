@@ -11,6 +11,14 @@ from dateutil.parser import parse as date_parser
 from xml.dom.minidom import parseString as parse_xml
 
 output = r"""
+/*
+Title: %(title)s
+Description: Bitcoin Update Podcast
+Date: %(date_f)s
+Author: Bitcoin Update Podcast
+Author_URL: http://bitcoinupdate.com
+*/
+
 %(title)s
 ===
 %(description)s
@@ -43,6 +51,7 @@ for item in items:
     if most_recent_date is None or date > most_recent_date:
         title, description, href = t, d, h
         most_recent_date = date
+        date_f = date.strftime("%Y/%m/%d")
 
 out = (output % locals()).encode('utf-8')
 print(out)
