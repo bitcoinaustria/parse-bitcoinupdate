@@ -17,6 +17,7 @@ Description: Bitcoin Update Podcast
 Date: %(date_f)s
 Author: Bitcoin Update Podcast
 Author_URL: http://bitcoinupdate.com
+Thumbnail: /assets/pictures/thumbs/thumb-bitcoinupdate.png
 */
 
 %(title)s
